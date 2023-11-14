@@ -30,9 +30,9 @@ public class FinalGrade {
     //Relaciòn con Subject
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "subject_id",referencedColumnName = "id")
-    private Subject Subject;
+    private Subject subject;
 
     //Relaciòn con section
-    @OneToMany(mappedBy = "final_grade", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "finalGrade", cascade = CascadeType.ALL)
     private List<Section> sections;
 }

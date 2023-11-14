@@ -2,8 +2,6 @@ package com.piback.PIback.models;
 
 import java.util.List;
 
-import org.yaml.snakeyaml.events.Event;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -43,5 +41,5 @@ public class Teacher {
 
     //Relaciòn con Event
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
-    private List<Event> events;
+    private List<Events> events;
 }
