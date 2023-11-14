@@ -10,24 +10,21 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "activity")
-public class Activity {
-    @Id
+@Table(name = "section")
+public class Events {
+      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "name_at", length = 50)
-    private String name_at;
+    @Column(name = "name_p", length = 50)
+    private String name_p;
 
-    @Column(name = "worth")
-    private long worth;
+    @Column(name = "start", length = 50)
+    private long start;
 
-    @Column(name = "type", length = 30)
-    private String type;
+     @Column(name = "end", length = 50)
+    private long end;
 
-    @Column(name = "description", length = 255)
-    private String description;
-
-    
-
+     @Column(name = "description", length = 250)
+    private long description;
 }
