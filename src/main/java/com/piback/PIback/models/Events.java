@@ -23,8 +23,8 @@ public class Events {
     @Column(name = "start", length = 50)
     private String start;
 
-     @Column(name = "end", length = 50)
-    private String end;
+     @Column(name = "finish", length = 50)
+    private String finish;
 
      @Column(name = "description", length = 250)
     private String description;
