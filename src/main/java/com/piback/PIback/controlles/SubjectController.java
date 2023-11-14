@@ -15,7 +15,7 @@ import com.piback.PIback.models.Subject;
 import com.piback.PIback.services.SubjectService;
 
 @RestController
-@RequestMapping("api/Subject")
+@RequestMapping("api/subject")
 @CrossOrigin({"*"})
 public class SubjectController {
      @Autowired
