@@ -3,12 +3,13 @@ package com.piback.PIback.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.piback.PIback.models.Section;
 import com.piback.PIback.repositories.SectionRepository;
 
 
-
+@Service
 public class SectionService {
     @Autowired
     private SectionRepository sectionRepository;

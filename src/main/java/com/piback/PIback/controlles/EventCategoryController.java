@@ -15,7 +15,7 @@ import com.piback.PIback.models.EventCategory;
 import com.piback.PIback.services.EventCategoryService;
 
 @RestController
-@RequestMapping("api/events")
+@RequestMapping("api/eventscategory")
 @CrossOrigin({"*"})
 public class EventCategoryController {
     @Autowired

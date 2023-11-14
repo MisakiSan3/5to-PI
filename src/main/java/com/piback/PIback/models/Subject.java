@@ -31,7 +31,7 @@ public class Subject {
 
     //Relaciòn con user
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     //Relaciòn con teacher

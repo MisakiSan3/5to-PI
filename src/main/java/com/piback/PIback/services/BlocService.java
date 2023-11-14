@@ -1,10 +1,12 @@
 package com.piback.PIback.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.piback.PIback.models.Bloc;
 import com.piback.PIback.repositories.BlocRepository;
 
+@Service
 public class BlocService {
     @Autowired
     private BlocRepository blocRepository;

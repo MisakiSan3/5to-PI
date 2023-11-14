@@ -16,11 +16,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
+  
     private long id;
 
     @Column(name = "nickname", length = 30)
@@ -34,7 +34,7 @@ public class User {
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "profile_id", referencedColumnName = "profile_id")
+    @JoinColumn(name = "id", referencedColumnName = "profile_id")
     private Profile profile;
 
 

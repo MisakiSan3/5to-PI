@@ -1,10 +1,12 @@
 package com.piback.PIback.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.piback.PIback.models.EventCategory;
 import com.piback.PIback.repositories.EventCategoryRepository;
 
+@Service
 public class EventCategoryService {
      @Autowired
     private EventCategoryRepository eventCategoryRepository;
