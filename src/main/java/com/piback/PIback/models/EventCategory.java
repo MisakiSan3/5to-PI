@@ -22,7 +22,7 @@ public class EventCategory {
     private String name_c;
 
     @ManyToOne
-    @JoinColumn(name = "id_tarea")
+    @JoinColumn(name = "event_id")
     private Events events;
     
 }
