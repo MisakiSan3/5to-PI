@@ -16,9 +16,9 @@ public class Bloc {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "title")
+    @Column(name = "title", length = 30)
     private String title;
 
-    @Column(name = "note")
+    @Column(name = "note", length = 200)
     private String note;
 }
