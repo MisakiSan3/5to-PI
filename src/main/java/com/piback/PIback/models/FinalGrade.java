@@ -17,5 +17,5 @@ public class FinalGrade {
     private long id;
 
     @Column(name = "value")
-    private String value;
+    private double value;
 }
