@@ -15,21 +15,21 @@ import com.piback.PIback.models.User;
 import com.piback.PIback.services.UserService;
 
 @RestController
-@RequestMapping("api/users")
+@RequestMapping("api/user")
 @CrossOrigin({"*"})
 public class UserController {
     @Autowired
     private UserService userService;
 
     @PostMapping("/save")
-    public User saveProveedores(@RequestBody User entity) {
+    public User saveUser(@RequestBody User entity) {
         
         
         return userService.saveUser(entity);
     }
 
      @GetMapping("/{id}")
-    public User findProveedores(@PathVariable long id)
+    public User findUser(@PathVariable long id)
     {
         return userService.findById(id);
     }
