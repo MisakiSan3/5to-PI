@@ -1,5 +1,6 @@
 package com.piback.PIback.controlles;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,43 +12,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.piback.PIback.models.Subject;
-import com.piback.PIback.services.SubjectService;
+import com.piback.PIback.models.Activity;
+import com.piback.PIback.services.ActivityService;
 
 @RestController
-@RequestMapping("api/subject")
+@RequestMapping("api/Activity")
 @CrossOrigin({"*"})
-public class SubjectController {
-     @Autowired
-    private SubjectService subjectService;
+
+public class ActivityController {
+    @Autowired 
+    private ActivityService activityService;
 
     @PostMapping("/save")
-    public Subject saveProveedores(@RequestBody Subject entity) {
-        
-        
-        return subjectService.saveSubjectRepository(entity);
+    public Activity save(@RequestBody Activity entity)
+    {
+        return activityService.save(entity);
     }
 
-     @GetMapping("/{id}")
-    public Subject findProveedores(@PathVariable long id)
+    @GetMapping("/{id}/")
+    public Activity findActivity(@PathVariable long id)
     {
-        return subjectService.findById(id);
+        return activityService.findById(id);
     }
-    @PutMapping("/{id}")
-    public Subject update(@RequestBody Subject entity)
+    @PutMapping("/{id}/")
+    public Activity update(@RequestBody Activity entity)
     {
-        return subjectService.saveSubjectRepository(entity);
+        return activityService.save(entity);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/")
     public void deleteByID(@PathVariable long id)
     {
-        subjectService.deleteByID(id);
+        activityService.deleteByID(id);
     }
 
     @GetMapping("/")
-    public Iterable<Subject> findAll()
+    public List<Activity> findAll()
     {
-        return subjectService.findAll();
+        return activityService.findAll();
     }
 }

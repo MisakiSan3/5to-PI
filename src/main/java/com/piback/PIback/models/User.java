@@ -45,4 +45,5 @@ public class User {
     //relacion one to many con la tabla subject//
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Subject> subject;
+    
 }

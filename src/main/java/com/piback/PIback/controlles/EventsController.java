@@ -11,43 +11,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.piback.PIback.models.Subject;
-import com.piback.PIback.services.SubjectService;
+import com.piback.PIback.models.Events;
+import com.piback.PIback.services.EventsService;
 
 @RestController
-@RequestMapping("api/subject")
+@RequestMapping("api/events")
 @CrossOrigin({"*"})
-public class SubjectController {
-     @Autowired
-    private SubjectService subjectService;
+public class EventsController {
+    @Autowired
+    private EventsService eventsService;
 
-    @PostMapping("/save")
-    public Subject saveProveedores(@RequestBody Subject entity) {
+     @PostMapping("/save")
+    public Events saveEvents(@RequestBody Events entity) {
         
-        
-        return subjectService.saveSubjectRepository(entity);
+        return eventsService.saveEvents(entity);
     }
 
      @GetMapping("/{id}")
-    public Subject findProveedores(@PathVariable long id)
+    public Events findEvents(@PathVariable long id)
     {
-        return subjectService.findById(id);
-    }
-    @PutMapping("/{id}")
-    public Subject update(@RequestBody Subject entity)
-    {
-        return subjectService.saveSubjectRepository(entity);
+        return eventsService.findById(id);
     }
 
-    @DeleteMapping("/{id}")
+    @PutMapping("/{id}")
+    public Events update(@RequestBody Events entity)
+    {
+        return eventsService.saveEvents(entity);
+    }
+
+     @DeleteMapping("/{id}")
     public void deleteByID(@PathVariable long id)
     {
-        subjectService.deleteByID(id);
+        eventsService.deleteByID(id);
     }
 
     @GetMapping("/")
-    public Iterable<Subject> findAll()
+    public Iterable<Events> findAll()
     {
-        return subjectService.findAll();
+        return eventsService.findAll();
     }
 }
