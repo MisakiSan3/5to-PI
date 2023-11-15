@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    image: kuyayana:1
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - target: 8091
+        published: 8091
+        protocol: tcp
+        mode: host
+    networks:
+      - tendencias_instituto_net
+  dbclases:
+    image: postgres:15.0-bullseye
+    environment:
+      - TZ=America/Guayaquil
+      - POSTGRES_DB=5to-pi
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_tendencia_instituto_data:/var/lib/postgresql/data/pgdata
+    networks:
+      - tendencias_instituto_net
+           
+volumes:
+  pg_tendencia_instituto_data:
+    external: true
+
+networks:
+  tendencias_instituto_net:
+    external: true
+
+secrets:
+  db_dev_pass:
+    external: true  
