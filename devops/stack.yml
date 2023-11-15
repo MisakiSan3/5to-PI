@@ -3,11 +3,9 @@ version: '3.8'
 services:
   backend:
     image: kuyayana:1
-    environment:
-      - SPRING_PROFILES_ACTIVE=prod
     ports:
-      - target: 8091
-        published: 8091
+      - target: 8092
+        published: 8092
         protocol: tcp
         mode: host
     networks:
@@ -21,12 +19,12 @@ services:
       - POSTGRES_USER=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - pg_tendencia_instituto_data:/var/lib/postgresql/data/pgdata
+      - pg_tendencia_kuyayana_data:/var/lib/postgresql/data/pgdata
     networks:
       - tendencias_instituto_net
            
 volumes:
-  pg_tendencia_instituto_data:
+  pg_tendencia_kuyayana_data:
     external: true
 
 networks:
