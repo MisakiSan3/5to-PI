@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     image: kuyayana:1
-    enviroment:
+    environment:
     - SPRING_PROFILES_ACTIVE=prod
     ports:
       - target: 8092
