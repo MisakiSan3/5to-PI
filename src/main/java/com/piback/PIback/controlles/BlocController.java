@@ -1,5 +1,7 @@
 package com.piback.PIback.controlles;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -46,7 +48,7 @@ public class BlocController {
     }
 
     @GetMapping("/")
-    public Iterable<Bloc> findAll()
+    public List<Bloc> findAll()
     {
         return blocService.findAll();
     }

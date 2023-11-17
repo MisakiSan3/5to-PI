@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.piback.PIback.models.User;
 import com.piback.PIback.repositories.UserRepository;
-
+import java.util.List;
 @Service
 public class UserService {
     @Autowired
@@ -27,7 +27,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public Iterable<User> findAll()
+    public List<User> findAll()
     {
         return userRepository.findAll();
     }

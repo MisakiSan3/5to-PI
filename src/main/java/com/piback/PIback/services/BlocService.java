@@ -1,5 +1,7 @@
 package com.piback.PIback.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +29,7 @@ public class BlocService {
         blocRepository.deleteById(id);
     }
 
-    public Iterable<Bloc> findAll()
+    public List<Bloc> findAll()
     {
         return blocRepository.findAll();
     }

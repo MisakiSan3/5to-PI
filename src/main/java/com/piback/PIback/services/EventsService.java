@@ -1,5 +1,7 @@
 package com.piback.PIback.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +28,7 @@ public class EventsService {
         eventsRepository.deleteById(id);
     }
 
-    public Iterable<Events> findAll()
+    public List<Events> findAll()
     {
         return eventsRepository.findAll();
     }
