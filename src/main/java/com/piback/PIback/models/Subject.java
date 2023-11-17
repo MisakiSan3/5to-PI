@@ -26,8 +26,8 @@ public class Subject {
     @Column(name = "name_s")
     private String name_s;
 
-    @OneToOne(mappedBy = "subject")
-    private FinalGrade finalGrade;
+    //@OneToOne(mappedBy = "subject")
+    //private FinalGrade finalGrade;
 
     //Relaciòn con user
     @ManyToOne
@@ -35,6 +35,6 @@ public class Subject {
     private User user;
 
     //Relaciòn con teacher
-    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
-    private List<Teacher> teachers;
+    //@OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
+    //private List<Teacher> teachers;
 }

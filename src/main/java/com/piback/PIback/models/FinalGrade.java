@@ -33,6 +33,6 @@ public class FinalGrade {
     private Subject subject;
 
     //Relaciòn con section
-    @OneToMany(mappedBy = "finalGrade", cascade = CascadeType.ALL)
-    private List<Section> sections;
+   //@OneToMany(mappedBy = "finalGrade", cascade = CascadeType.ALL)
+   //private List<Section> sections;
 }

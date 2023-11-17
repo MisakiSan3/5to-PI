@@ -40,6 +40,6 @@ public class Teacher {
     private Subject subject;
 
     //Relaciòn con Event
-    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
-    private List<Events> events;
+    //@OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
+    //private List<Events> events;
 }

@@ -27,8 +27,8 @@ public class Section {
     @Column(name = "percentage_value")
     private long percentage_value;
 
-    @OneToMany(mappedBy = "section")
-    private List<Activity> activities;
+    //@OneToMany(mappedBy = "section")
+    //private List<Activity> activities;
 
     @ManyToOne
     @JoinColumn(name = "finalgrade_id")

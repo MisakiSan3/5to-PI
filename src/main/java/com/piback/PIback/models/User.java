@@ -31,16 +31,16 @@ public class User {
     private String password;
 
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private Profile profile;
+   /*@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+   private Profile profile;
 
 
-    //relacion one to many con la tabla bloc//S
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Bloc> bloc;
+   //relacion one to many con la tabla bloc//S
+   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+   private List<Bloc> bloc;
 
-    //relacion one to many con la tabla subject//
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Subject> subject;
+   //relacion one to many con la tabla subject//
+   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+   private List<Subject> subject;/* */
     
 }

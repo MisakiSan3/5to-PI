@@ -22,6 +22,6 @@ public class EventCategory {
     @Column(name = "name_c", length = 50)
     private String name_c;
 
-    @OneToMany(mappedBy = "eventCategory")
-    private List<Events> events;
+    //@OneToMany(mappedBy = "eventCategory")
+    //private List<Events> events;
 }
