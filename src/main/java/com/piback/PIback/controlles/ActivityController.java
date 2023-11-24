@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.piback.PIback.models.Activity;
 import com.piback.PIback.services.ActivityService;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @RestController
 @RequestMapping("api/Activity")
 @CrossOrigin({"*"})
@@ -22,7 +24,7 @@ import com.piback.PIback.services.ActivityService;
 public class ActivityController {
     @Autowired 
     private ActivityService activityService;
-
+    @Operation(summary = "post activity", description = "Guarda actividades")
     @PostMapping("/save")
     public Activity save(@RequestBody Activity entity)
     {
