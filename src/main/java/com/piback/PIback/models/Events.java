@@ -17,14 +17,14 @@ public class Events {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "name_p", length = 50)
-    private String name_p;
+    @Column(name = "title", length = 50)
+    private String title;
 
     @Column(name = "start", length = 50)
     private String start;
 
      @Column(name = "finish", length = 50)
-    private String finish;
+    private String end;
 
      @Column(name = "description", length = 250)
     private String description;
