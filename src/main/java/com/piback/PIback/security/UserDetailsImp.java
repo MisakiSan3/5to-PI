@@ -52,4 +52,7 @@ public class UserDetailsImp implements UserDetails {
         return user.getNickname();
     }
     
+    public long getId() {
+        return user.getId();
+    }
 }
